@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        table,th, td{          
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 5px 5px 20px;
+        }
+        table{
+            width: 100%;
+        }
+       
+    </style>
+</head>
+<body>
+    <script>
+        var con = document.createElement('div');
+        con.className = "container";
+        con.style.width = "100%";
+        con.style.height = "100vh";
+        con.style.backgroundColor = "gray";
+
+        var rem = document.createElement('div');
+        rem.className = "card";
+        rem.style.width = "700px";
+        rem.style.height = "100vh";
+        rem.style.backgroundColor = "white";
+        rem.style.padding = "50px";
+        con.style.display = "flex";
+        con.style.justifyContent = "center";
+
+        var nam=document.createElement('div');
+        nam.className = "name";
+        
+        var h4 = document.createElement('span');
+        h4.innerHTML = "NAME:SANDHYA RANI";
+        h4.style.fontSize = "20px";
+        h4.style.fontWeight = "bold";
+
+        var mail = document.createElement('div');
+        mail.innerHTML = "<br><b>Email:</b>xxxxxxxxxxxx@gmail.com";
+        nam.appendChild(h4);
+        nam.appendChild(mail);
+        // nam.style.display = "flex";
+        rem.appendChild(nam);
+
+        var head = document.createElement('div');
+        var h3 = document.createElement('h3');
+        h3.innerHTML = "Objective:";
+        h3.style.backgroundColor = "#f8dd8f";
+        head.appendChild(h3);
+        var career = document.createElement('p');
+        career.innerHTML = "Passionate full-stack developer with a focus on delivering innovative solutions. Seeking opportunities to leverage expertise in frontend and backend development to contribute to dynamic projects. Committed to continuous learning and collaboration in a fast-paced software environment.";
+        head.appendChild(career);
+        rem.appendChild(head);
+
+        var tabh = document.createElement('div');
+        var h1 =document.createElement(h3);
+        h1.innerHTML="Academics:";
+        h1.style.backgroundColor = "#f8dd8f";
+        tabh.appendChild(h1);
+        rem.appendChild(tabh);
+        var tab = document.createElement('div');
+
+        const data = [{"Qualification":"Degree(B.sc-mpcs)","Institution":"sai sudhir degree college(ECIL)","Year of passing":"2021","CGPA/%":"91%"},{"Qualification":"Intermediate(MPC)","Institution":"Sumitra jr college(cherial)","Year of passing":"2018","CGPA/%":"84%"},{"Qualification":"S.S.C","Institution":"ZPHS high school","passing year":"2016","CGPA/%":"85%"}]
+
+        var table = "<table><thead><tr><th>Qualification</th><th>Institution</th><th>passing year</th><th>CGPA/%</th></tr></thead><tbody>";
+            for (var i = 0 ; i < data.length; i++){
+                table += "<tr><td>" +
+               data[i].Qualification  + "</td><td>" + 
+               data[i].Institution  + "</td><td>" + 
+            data[i].passing year  + "</td><td>" + data[i].CGPA/%  + "</td></tr>" ;
+            }
+            table += "</tbody></table>";
+            tab.innerHTML = table ;
+            
+            rem.appendChild(tab);
+
+            var skills = document.createElement('div');
+            var h2= document.createElement('h3');
+            h2.innerHTML = "Skills";
+            h2.style.backgroundColor = "#f8dd8f";
+            skills.appendChild(h2);
+            var L1 =document.createElement('li');
+            L1.innerHTML="C,C++ Python(Programming languages)";
+            L1.style.paddingBottom="10px";
+            skills.appendChild(L1);
+            var L2 =document.createElement('li');
+            L2.innerHTML="HTML,CSS,Bootstrap";
+            L2.style.paddingBottom="10px";
+            skills.appendChild(L2);
+            var L3 =document.createElement('li');
+            L3.innerHTML="Basic SQL, MongoDB";
+            L3.style.paddingBottom="10px";
+            skills.appendChild(L3);
+            var L4 =document.createElement('li');
+            L4.innerHTML="Basic Git Hub";
+            L4.style.paddingBottom="10px";
+            skills.appendChild(L4);
+            rem.appendChild(skills);
+
+            var declar = document.createElement('div');
+            var h3 = document.createElement('h3');
+            h3.innerHTML = "Declaration:";
+            h3.style.backgroundColor = "#f8dd8f";
+            declar.appendChild(h3);
+            var para =document.createElement('p');
+            para.innerHTML = "The information presented in this resume accurately reflects my qualifications and experience.";
+            declar.appendChild(para);
+            rem.appendChild(declar);        
+
+        con.appendChild(rem);
+        document.body.appendChild(con);
+        console.log(con);
+    </script>
+    <div class="container" style="width: 100vw; height: 100vh; background-color: gray; display: flex; justify-content: center;">
+    <div class="card" style="width: 700px; height: 100vh; background-color: white; padding: 50px;">
+    <div>
+        <div class="NAME" style="display: flex; justify-content: space-between;">
+<span style="font-size: 20px; font-weight: bold;">NAME:SANDHYA RANI</span>
+        </div>
+        <div>
+            <br>
+            <b>Email:</b>
+            xxxxxxxxxxxx@gmail.com
+        </div>
+    <h3 style="background-color: #f8dd8f;">Objective:</h3>
+    <p>Passionate full-stack developer with a focus on delivering innovative solutions. Seeking opportunities to leverage expertise in frontend and backend development to contribute to dynamic projects. Committed to continuous learning and collaboration in a fast-paced software environment.</p>
+    </div>
+    <div>
+        <h3 style="background-color: #f8dd8f;">Academics:</h3>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>passing year</th>
+                    <th>CGPA/%</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Degree(B.sc-mpcs)</td>
+                    <td>sai sudhir degree college(ECIL)</td>
+                    <td>2021</td>
+                    <td>91%</td>
+                </tr>
+                <tr><td>Intermediate(MPC)</td>
+                    <td>Sumitra jr college(cherial)</td>
+                    <td>2018</td>
+                    <td>84%</td></tr>
+                <tr><td>S.S.C</td>
+                    <td>ZPHS high school</td>
+                    <td>2016</td>
+                    <td>85%</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 style="background-color: #f8dd8f;">Skills:</h3>
+        <li style="padding-bottom: 10px;">C,C++ Python(Programming languages)</li>
+        <li style="padding-bottom: 10px;">HTML,CSS,Bootstrap</li>
+        <li style="padding-bottom: 10px;">Basic SQL, MongoDB</li>
+        <li style="padding-bottom: 10px;">Basic Git Hub</li>
+       
+    </div>
+    <div>
+        <h3 style="background-color: #f8dd8f;">Declaration:</h3>
+        <p>The information presented in this resume accurately reflects my qualifications and experience.</p>
+    </div>
+</div>
+</div>
+</body>
+</html>
